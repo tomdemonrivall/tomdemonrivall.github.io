@@ -1,4 +1,4 @@
-# Dev Landing Page
+# Dev Landing Page.
 
 Minimal landing page for developers.
 

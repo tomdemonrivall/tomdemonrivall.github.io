@@ -57,6 +57,11 @@ main > .tagline {
 
 .icons-social i {
 	padding: 10px;
+
+}
+.icons-social i {
+	padding: 10px;
+
 }
 
 .devto {
@@ -69,3 +74,42 @@ main > .tagline {
 	width: 2.65rem;
 	height: 2.65rem;
 }
+
+#linkedin {
+	bottom: 35%;
+	position: absolute;
+	-webkit-animation: linear infinite alternate;
+	-webkit-animation-name: link;
+	-webkit-animation-duration: 6s;
+  }
+  @-webkit-keyframes link {
+	0% {
+	  right: 25%;
+	}
+	50% {
+		right: 48%;
+	}
+	100% {
+		right: 25%;    
+	}
+}
+
+  #github {
+	bottom: 35%;
+	position: absolute;
+	-webkit-animation: linear infinite alternate;
+	-webkit-animation-name: git;
+	-webkit-animation-duration: 6s;
+  }
+  @-webkit-keyframes git {
+	0% {
+		left: 25%;
+	  }
+	  50% {
+		left: 48%;
+	  }
+	  100% {
+		left: 25%;    
+	  }
+  }
+  

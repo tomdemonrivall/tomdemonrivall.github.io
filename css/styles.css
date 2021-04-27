@@ -63,6 +63,13 @@ main > .tagline {
 	padding: 10px;
 
 }
+.icons-social i:hover{
+	cursor: pointer;
+	transform: translateY(-10px) scale(1.5);
+	transition: all .2s ease-in;
+	color: #310004;
+}
+
 
 .devto {
 	margin-bottom: -0.20rem;

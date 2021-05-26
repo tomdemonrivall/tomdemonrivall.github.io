@@ -2,34 +2,28 @@ let inauthor = document.querySelector("#author");
 let intitle = document.querySelector("#title");
 let poembox = document.querySelector("#poembox");
 let search = document.querySelector("#search");
+let ListAuthors = document.querySelector("#Authors-list");
+
+fetch(`https://poetrydb.org/author`)
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
+    console.log(data.authors);
+    console.log(data.authors.length);
+    for (i = 0; i < data.authors.length; i++) {
+      let AuthorsOption = document.createElement("option");
+      ListAuthors.append(AuthorsOption);
+      let Authors = document.createTextNode(data.authors[i]);
+      // AuthorsOption = data.authors[i];
+      AuthorsOption.append(Authors);
+      console.log(AuthorsOption);
+    }
+    console.log(ListAuthors);
+  });
 
 search.addEventListener("click", (event) => {
   let author = inauthor.value;
   let title = intitle.value;
-
-  //   let ifauthor;
-  //   let iftitle;
-  //   if (inauthor.value.length > 0 && intitle.value.length > 0) {
-  //     ifauthor = "author";
-  //     iftitle = ",title/";
-  //     author = inauthor.value;
-  //     title = `${intitle.value}`;
-  //   } else if (inauthor.value.length > 0 && intitle.value.length < 0) {
-  //     ifauthor = "author/";
-  //     iftitle = "";
-  //     author = inauthor.value;
-  //     title = "";
-  //   } else if (inauthor.value.length < 0 && intitle.value.length > 0) {
-  //     ifauthor = "";
-  //     iftitle = "title/";
-  //     author = "";
-  //     title = intitle.value;
-  //   } else if (inauthor.value.length < 0 && intitle.value.length < 0) {
-  //     ifauthor = "";
-  //     iftitle = "";
-  //     author = "";
-  //     title = "";
-  //   }
 
   // https://poetrydb.org/author,title/Shakespeare;Sonnet
   // https://poetrydb.org/author/Emily Dickinson/title

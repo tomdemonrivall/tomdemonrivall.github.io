@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body class="column">
+    <div id="Header" class="">
+      <h1 class="center">My Pokedex</h1>
+    </div>
+    <div id="Container" class="center">
+      <div id="Pokedex" class="center">
+        <div class="left column">
+          <div id="TopBackgroun">
+            <div class="EmptyRight"></div>
+            <div class="wave reverserow">
+              <div class="wave1l borderTL"></div>
+              <div class="wave2"></div>
+              <div class="wave3"></div>
+            </div>
+          </div>
+          <div id="Result center" class="border">
+            <div class="ID row border">
+              <div class="IDNumber center border">#001</div>
+              <div class="IDName full border"><h2>Bulbizar</h2></div>
+            </div>
+            <div class="Pictures row bottom border">
+              <div class="PreviousEv column border">
+                <div class="PreviousEvName border">Previous Ev Name</div>
+                <div class="PreviousEvPicture border">Previous Ev Img</div>
+              </div>
+              <div class="Current center column border">
+                <div class="CurrentPicture border"> </div>
+                <div class="CurrentMoves row border">
+                  <ul class="Moves center row wrap">
+                    <li>move1</li>
+                    <li>move2</li>
+                    <li>move3</li>
+                    <li>move4</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="middle border column"> </div>
+        <div class="right">
+          <div id="TopBackgroun">
+            <div class="EmptyRight"></div>
+            <div class="wave row">
+              <div class="wave1"></div>
+              <div class="wave2"></div>
+              <div class="wave3"></div>
+            </div>
+          </div>
+          <div id="menu" class="border column center">
+            <div id="Choices" class="border center">
+              <form action="#" method="post">
+                <div class="field">
+                  <label for="PokeNumberlist">Poke Number:</label>
+                  <input type="text" name="PokeNumber" id="PokeNumberlist" />
+                </div>
+                <div class="field">
+                  <label for="PokeNamelist">Poke Name:</label>
+                  <input list="PokeName" name="PokeName" id="PokeNamelist" />
+                  <datalist id="PokeName">
+                    <option>Legendary Diogo </option>
+                  </datalist>
+                </div>
+                <div class="buttons">
+                  <div class="actions">
+                    <button type="button" id="search">Search</button>
+                  </div>
+                  <div class="actions">
+                    <button type="button" id="clear">Clear</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="Commands border row">
+              <div class="actions">
+                <button type="button" id="Previous">Previous</button>
+              </div>
+              <div class="actions">
+                <button type="button" id="Next">Next</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer></footer>
+  <script src="index.js"></script>
+</html>

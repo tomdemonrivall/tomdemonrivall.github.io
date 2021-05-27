@@ -2,4 +2,87 @@ body {
   font-family: Garamond;
   font-style: italic;
   font-size: 26px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #cceffa;
+}
+#h1-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+h1 {
+  margin-block: 5px;
+}
+#Container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  min-height: 650px;
+  max-height: 700px;
+}
+#Menu {
+  border-top: 5px solid #21a3ce;
+  border-right: 5px solid #21a3ce;
+  border-top-right-radius: 15px;
+  min-height: 600px;
+  padding-top: 40px;
+  padding-left: 15px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#poembox {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  margin-left: 50px;
+  overflow: auto;
+}
+hr {
+  border: 2.5px solid #21a3ce;
+  clear: both;
+  display: block;
+  width: 96%;
+  background-color: #21a3ce;
+  height: 1px;
+  border-radius: 3px;
+}
+.PoemColumn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.Notes {
+  font-size: 85%;
+  margin-top: 100px;
+}
+.Choices {
+  min-width: 275px;
+}
+.field {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 15px 0px 0px;
+  height: 25px;
+}
+input {
+  border: 2px solid darkslategrey;
+  border-radius: 5px;
+  background-color: #bddde7;
+}
+
+.buttons {
+  display: flex;
+  margin-top: 10px;
+}
+button {
+  margin-right: 15px;
+  background-color: #bddde7;
+  height: 25px;
+  border-radius: 5px;
 }

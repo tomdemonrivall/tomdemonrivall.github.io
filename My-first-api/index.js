@@ -1,29 +1,52 @@
-let inauthor = document.querySelector("#author");
-let intitle = document.querySelector("#title");
+let InputAuthor = document.querySelector("#author");
+let InputTitle = document.querySelector("#title");
 let poembox = document.querySelector("#poembox");
 let search = document.querySelector("#search");
 let ListAuthors = document.querySelector("#Authors-list");
+let ListTitle = document.querySelector("#Title-list");
 
 fetch(`https://poetrydb.org/author`)
   .then((response) => response.json())
   .then((data) => {
     console.log(data);
-    console.log(data.authors);
-    console.log(data.authors.length);
     for (i = 0; i < data.authors.length; i++) {
       let AuthorsOption = document.createElement("option");
       ListAuthors.append(AuthorsOption);
       let Authors = document.createTextNode(data.authors[i]);
       // AuthorsOption = data.authors[i];
       AuthorsOption.append(Authors);
-      console.log(AuthorsOption);
     }
-    console.log(ListAuthors);
   });
 
+InputAuthor.addEventListener("change", (event) => {
+  console.log("event ok");
+  let author = InputAuthor.value;
+  let title = InputTitle.value;
+  ListTitle.innerHTML = "";
+  InputTitle.value = "";
+  fetch(`https://poetrydb.org/author/${author}/title`)
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      console.log(data.length);
+      console.log(data[1]);
+      console.log(data[1].title);
+
+      for (i = 0; i < data.length; i++) {
+        let TitleOption = document.createElement("option");
+        ListTitle.append(TitleOption);
+        let Title = document.createTextNode(data[i].title);
+        // TitleOption = data.authors[i];
+        TitleOption.append(Title);
+        console.log(TitleOption);
+      }
+      console.log(ListTitle);
+    });
+});
+
 search.addEventListener("click", (event) => {
-  let author = inauthor.value;
-  let title = intitle.value;
+  let author = InputAuthor.value;
+  let title = InputTitle.value.slice(0, 15);
 
   // https://poetrydb.org/author,title/Shakespeare;Sonnet
   // https://poetrydb.org/author/Emily Dickinson/title
@@ -53,4 +76,13 @@ search.addEventListener("click", (event) => {
         lines.append(element);
       });
     });
+});
+clear.addEventListener("click", (event) => {
+  poembox.innerHTML = "";
+});
+InputAuthor.addEventListener("click", (event) => {
+  InputAuthor.value = "";
+});
+InputTitle.addEventListener("click", (event) => {
+  InputTitle.value = "";
 });

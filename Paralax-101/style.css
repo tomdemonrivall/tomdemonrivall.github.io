@@ -39,13 +39,16 @@ position: absolute;
 }
 
 #back{
-  position: absolute;
-  background-image: url("/images/Galaxy.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 150% 150%;
+  /* position: absolute; */
+  /* background-image: url("/images/Galaxy.jpg"); */
+  /* background-position: center;
+  background-repeat: no-repeat; */
+  /* background-size: 150% 150%; */
   height: 150%;
   width: 150%;
+}
+.galaxy img{
+  width: 100%;
 }
 .trees{
   display: flex;

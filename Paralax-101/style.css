@@ -20,7 +20,7 @@ overflow: hidden;
 .moon{
   position: relative; 
   left: -50%;
-  bottom: -50%;
+  bottom: 0px;
 }
 .moon > img{
   width: 45vh;
@@ -39,7 +39,7 @@ position: absolute;
 
 #back{
   /* position: absolute; */
-  /* background-image: url("/images/Galaxy.jpg"); */
+  /* background-image: url("/images/galaxy2.jpg"); */
   /* background-position: center;
   background-repeat: no-repeat; */
   /* background-size: 150% 150%; */
